@@ -1,0 +1,116 @@
+.track-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+.unreleased {
+  color: #b1b1b1;
+}
+
+.play-icon-con, .track-no-con, .track-name-con, .time-con, .lyrics-con {
+  float: left;
+}
+
+.play-icon-con {
+  width: 8%;
+}
+
+.track-no-con {
+  width: 8%;
+  cursor: pointer;
+}
+
+.track-name-con {
+  width: 59%;
+  cursor: pointer;
+}
+
+.time-con {
+  width: 10%;
+}
+
+.lyrics-con {
+  width: 15%;
+}
+
+.play-icon {
+  position: relative;
+  display: inline-block;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(../../../../assets/icons/play-icon.png) no-repeat center;
+  background-size: contain;
+}
+
+.play-icon-grey {
+  position: relative;
+  display: inline-block;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(../../../../assets/icons/play-icon-grey.png) no-repeat center;
+  background-size: contain;
+}
+
+.pause-icon {
+  position: relative;
+  display: inline-block;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(../../../../assets/icons/pause-icon.png) no-repeat center;
+  background-size: contain;
+}
+
+.track-name {
+  margin: 0 5px 0 0;
+}
+
+.lyrics {
+  cursor: pointer;
+}
+
+.buystream-con {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  text-align: start;
+}
+
+.buystream-title {
+  margin: 5px 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.stream-con {
+  margin: 20px 0;
+}
+
+.btn-con {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #000000;
+  padding: 7px 20px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 799px) {
+
+
+}
+
+@media screen and (max-width: 798px) {
+
+
+
+}

@@ -1,0 +1,226 @@
+.main-container {
+  position: relative;
+  padding: 0 0 0 0;
+}
+
+.top-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+
+.top-con-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* height: 50%; */
+  height: 238px;
+  background: url('../../../assets/son-of-uri-album-art_wo_text.webp') no-repeat center;
+  background-size: cover;
+}
+
+.top-con-im {
+  float: right;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+}
+
+.links:after {
+  bottom: -1px;
+}
+
+@media screen and (min-width: 799px) {
+
+  .float-right {
+    float: right;
+    width: 100%;
+  }
+
+  .top-wrapper {
+    position: relative;
+    padding: 25px 35px 0 35px;
+  }
+
+
+
+  .grid-col-50 {
+    float: left;
+    width: 50%;
+  }
+
+  .top-con-img-con {
+    position: relative;
+    float: right;
+    width: 100%;
+    max-width: 450px;
+    height: 45vw;
+    max-height: 450px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .top-con-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    max-width: 450px;
+    background: url(../../../assets/son-of-uri-album-art_500x500.jpg) no-repeat;
+    background-size: contain;
+  }
+
+  .top-con-text {
+    position: relative;
+    max-width: 400px;
+    height: auto;
+    max-height: 400px;
+    padding: 40px 0 0 40px;
+  }
+
+  .top-text {
+    color: #ffffff;
+  }
+
+  .text-type {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  .text-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .text-date {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .text-listen-now {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 18px 0 0 0;
+  }
+
+  .sort-con {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .sort-con a {
+    margin: 15px 15px;
+  }
+}
+
+@media screen and (max-width: 798px) {
+
+  .grid-col-100 {
+    float: left;
+    width: 100%;
+  }
+
+  .top-con-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    min-height: 210px;
+    background: url('../../../assets/son-of-uri-album-art_wo_text.webp') no-repeat center;
+    background-size: cover;
+  }
+
+  .top-wrapper {
+    position: relative;
+    padding: 25px 10px 0 10px;
+  }
+
+  .top-con-img-con {
+    position: relative;
+    height: 70vw;
+    max-height: 500px;
+    padding: 0 0 0 0px;
+  }
+
+  .top-con-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+    background: url(../../../assets/son-of-uri-album-art_500x500.jpg) no-repeat;
+    background-size: contain;
+  }
+
+  .top-con-text {
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+
+  .text-type {
+    /* display: none; */
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  .text-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .text-date {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .text-listen-now {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: 18px 0 0 0;
+  }
+
+  .sort-con {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .sort-con a {
+    margin: 15px 15px;
+  }
+
+}
+
+@media only screen and (max-width: 372px)   {
+  .sort-con a {
+    margin: 15px 5px;
+  }
+}

@@ -1,0 +1,56 @@
+<div class="main-con" *ngIf="type === 'single'">
+  <div class="wrapper">
+    <div class="lyrics-con" *ngIf="music.single.lyrics.length > 0; else noLyrics">
+      <div class="title-con">
+        <h2 class="title" *ngIf="music.single.feat.length === 0">{{music.single.trackName}}</h2>
+        <h2 class="title" *ngIf="music.single.feat.length > 0">{{music.single.artist}} - {{music.single.trackName}} (feat. {{music.single.feat}})</h2>
+      </div>
+      <div class="lyrics-con">
+        <div class="lyrics" *ngFor="let lyric of music.single.lyrics">
+          <p>{{lyric}}</p>
+          <br *ngIf="lyric === ''">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-con" *ngIf="type === 'feature'">
+  <div class="wrapper">
+    <div class="lyrics-con" *ngIf="music.feature.lyrics.length > 0; else noLyrics">
+      <div class="title-con">
+        <h2 class="title" *ngIf="music.single.feat.length === 0">{{music.feature.trackName}}</h2>
+        <h2 class="title" *ngIf="music.single.feat.length > 0">{{music.feature.artist}} - {{music.feature.trackName}} (feat. {{music.feature.feat}})</h2>
+      </div>
+      <div class="lyrics-con">
+        <div class="lyrics" *ngFor="let lyric of music.feature.lyrics">
+          <p>{{lyric}}</p>
+          <br *ngIf="lyric === ''">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-con" *ngIf="type === 'album'">
+  <div class="wrapper" *ngFor="let track of music.album.tracks">
+    <div class="lyrics-con" *ngIf="track.lyrics.length > 0 && track.released">
+      <div class="title-con">
+        <h2 class="title" *ngIf="track.feat.length === 0">{{track.trackName}}</h2>
+        <h2 class="title" *ngIf="track.feat.length > 0">{{track.artist}} - {{track.trackName}} (feat. {{track.feat}})</h2>
+      </div>
+      <div class="lyrics-con">
+        <div class="lyrics" *ngFor="let lyric of track.lyrics">
+          <p>{{lyric}}</p>
+          <br *ngIf="lyric === ''">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template class="noLyrics" #noLyrics>
+  <div class="noLyrics">
+    There is currently no lyrics available.
+  </div>
+</ng-template>

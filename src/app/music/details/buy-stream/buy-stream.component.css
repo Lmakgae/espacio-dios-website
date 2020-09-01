@@ -1,0 +1,25 @@
+.buystream-con {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: start;
+}
+
+.buystream-title {
+  margin: 5px 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.stream-con {
+  margin: 20px 0;
+}
+
+.btn-con {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #000000;
+  padding: 7px 20px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.container {
+  padding: 90px 25px 40px 25px;
+}
+
+.t-a-c {
+  text-align: center;
+}
+
+.c {
+  margin: 0 auto;
+}
+
+.privacy {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ul {
+  display: block;
+  padding-inline-start: 20px;
+}
+
+.li-none {
+  list-style: none;
+  margin-top: 5px;
+}

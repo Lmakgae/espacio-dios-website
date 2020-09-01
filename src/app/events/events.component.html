@@ -1,0 +1,55 @@
+<div class="events-con">
+  <h3 class="heading">Upcoming Events</h3>
+
+  <div class="noEvents" *ngIf="events.length === 0">
+    There are currently no upcoming events.
+  </div>
+
+  <div *ngFor="let event of events; let i=index">
+    <div class="event" *ngIf="(i + 1) % 2 > 0">
+      <div class="date">
+        <!-- <p><span class="mon">{{event.month}} </span><span class="day">{{event.day}}</span><span class="year-d">, {{event.year}}</span> </p> -->
+        <p><span class="mon">TBA </span> </p>
+        <h5 class="year">{{event.year}}</h5>
+      </div>
+      <div class="location" >
+        <h3 class="venue">{{event.venue}}</h3>
+        <p class="country">{{event.city}}, {{event.country}}</p>
+        <a class="location-link" [href]="event.locationLink" target="_blank" rel="noreferrer"></a>
+      </div>
+      <div class="btns">
+        <a class="button" [href]="event.ticketLink" target="_blank" rel="noreferrer" *ngIf="event.status === 'avail'">Tickets</a>
+        <a class="button" *ngIf="event.status === 'sold-out'">Postponed</a>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="event g" *ngIf="(i + 1) % 2 === 0">
+      <div class="date">
+        <!-- <p><span class="mon">{{event.month}} </span><span class="day">{{event.day}}</span><span class="year-d">, {{event.year}}</span> </p> -->
+        <p><span class="mon">TBA </span> </p>
+        <h5 class="year">{{event.year}}</h5>
+      </div>
+      <div class="location" >
+        <h3 class="venue">{{event.venue}}</h3>
+        <p class="country">{{event.city}}, {{event.country}}</p>
+        <a class="location-link" [href]="event.locationLink" target="_blank" rel="noreferrer"></a>
+      </div>
+      <div class="btns">
+        <a class="button" [href]="event.ticketLink" target="_blank" rel="noreferrer" *ngIf="event.status === 'avail'">Tickets</a>
+        <a class="button" *ngIf="event.status === 'sold-out'">Postponed</a>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="newsletter-con">
+
+  <p class="wantMore">Want to find out more about upcoming events?</p>
+  <app-sign-up-form></app-sign-up-form>
+  <app-social-media-links color="black" ></app-social-media-links>
+
+</div>

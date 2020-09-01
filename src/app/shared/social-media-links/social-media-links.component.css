@@ -1,0 +1,55 @@
+.social-links-container {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.social-links-container a{
+  display: inline-block;
+  margin: 1rem;
+}
+
+.facebook {
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.twitter {
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.instagram {
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.youtube {
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.apple {
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.spotify {
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+

@@ -1,0 +1,168 @@
+.landing-container {
+  position: relative;
+  height: 100%;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+
+.nav-container .title {
+  font-size: 3rem;
+  position: relative;
+  text-align: center;
+  top: 0.5rem;
+}
+
+.espacio-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/espacio-backround-min.jpg') no-repeat center ;
+  background-size: cover;
+  z-index: 0;
+}
+
+.nav-links {
+  position: relative;
+  top: 1rem;
+  text-align: center;
+}
+
+.nav-links a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 300ms;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.nav-links a:hover {
+  color: #000000;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+.social-links-container {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 2.5%;
+  text-align: center;
+}
+
+.social-links-container a{
+  display: inline-block;
+  margin: 1rem;
+}
+
+.facebook {
+  background-image: url(../../assets/icons/facebook-black.svg);
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.facebook:hover {
+  background-image: url(../../assets/icons/facebook-grey.svg);
+}
+
+.twitter {
+  background-image: url(../../assets/icons/twitter-black.svg);
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.twitter:hover {
+  background-image: url(../../assets/icons/twitter-grey.svg);
+}
+
+.instagram {
+  background-image: url(../../assets/icons/instagram-black.svg);
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.instagram:hover {
+  background-image: url(../../assets/icons/instagram-grey.svg);
+}
+
+.youtube {
+  background-image: url(../../assets/icons/youtube-black.svg);
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.youtube:hover {
+  background-image: url(../../assets/icons/youtube-grey.svg);
+}
+
+.apple {
+  background-image: url(../../assets/icons/apple-black.svg);
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.apple:hover {
+  background-image: url(../../assets/icons/apple-grey.svg);
+}
+
+.spotify {
+  background-image: url(../../assets/icons/spotify-black.svg);
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  top: 0px;
+}
+
+.spotify:hover {
+  background-image: url(../../assets/icons/spotify-grey.svg);
+}
+
+.footer-container {
+  background-color: #1b1b1b;
+  position: relative;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 100;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-container a:hover {
+  color: #4e4b4b;
+}

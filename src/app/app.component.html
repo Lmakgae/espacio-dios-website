@@ -1,0 +1,51 @@
+<a class="skip-link" href="#main">Skip to main</a>
+<div #headerCon class="header-con">
+  <div class="wrapper">
+    <div class="header-links">
+      <a #headerLink1 class="header-link links" [routerLink]="['/music']">MUSIC</a>
+      <a #headerLink2 class="header-link links" [routerLink]="['/events']">EVENTS</a>
+      <a #headerLink3 class="header-title" [routerLink]="['/']" >ESPACIO DIOS</a>
+      <a #headerLink4 class="header-link links" [routerLink]="['/bio']">BIO</a>
+      <a #headerLink5 class="header-link links" href="https://store.espaciodios.com" target="_blank" rel="noreferrer">STORE</a>
+    </div>
+
+    <a class="header-title-m" [routerLink]="['/']">ESPACIO DIOS</a>
+
+    <div class="hamburger-container">
+      <div #hamburger class="hamburger hamburger--collapse" (click)="toggleMenu()" >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div #menu id="main" class="menu-container left-0">
+  <div class="menu-list" >
+    <a class="menu-list-item" [routerLink]="['/music']" (click)="navigateToMenu()" >MUSIC</a>
+    <a #menuItem1 class="menu-list-item " [routerLink]="['/events']" (click)="navigateToMenu()" >EVENTS</a>
+    <a class="menu-list-item" [routerLink]="['/bio']" (click)="navigateToMenu()" >BIO</a>
+    <a #menuItem2 class="menu-list-item " href="https://store.espaciodios.com" target="_blank" rel="noreferrer" >STORE</a>
+  </div>
+
+  <div class="menu-footer">
+    <app-social-media-links color="grey" ></app-social-media-links>
+  </div>
+
+</div>
+
+<div #main class="main-con">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="footer-con">
+  <a class="links" [routerLink]="['/terms']" >Terms & Conditions</a> |
+  <a class="links" [routerLink]="['/privacy']" >Privacy Policy</a> |
+  <a class="links" [routerLink]="['/feedback']" >Send Us Feedback</a>
+  <br>
+  Made with ❤ by<a class="links" href="https://github.com/lmakgae" target="_blank" rel="noreferrer">Hlogi</a>
+  <br>
+  <p>© 2020 Espacio Dios. All Rights Reserved.</p>
+</div>

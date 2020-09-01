@@ -1,0 +1,22 @@
+<div class="main-con">
+  <div class="wrapper">
+    <div class="cancel-con">
+      <div class="cancel-icon" (click)="close()"></div>
+    </div>
+
+    <div class="lyrics-con">
+      <div class="title-con">
+        <h2 class="title" *ngIf="lyricsOptions.feat.length === 0">{{lyricsOptions.title}}</h2>
+        <h2 class="title" *ngIf="lyricsOptions.feat.length > 0">{{lyricsOptions.title}} (feat. {{lyricsOptions.feat}})</h2>
+      </div>
+      <div class="lyrics-con">
+        <div class="lyrics" *ngFor="let lyric of lyricsOptions.body">
+          <p>{{lyric}}</p>
+          <br *ngIf="lyric === ''">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

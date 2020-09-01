@@ -1,0 +1,49 @@
+<div class="container" *ngIf="type === 'single'">
+  <div class="video-item" *ngIf="music.single.videoUrl.length > 0; else noVids" (click)="viewVideo(music.single.videoUrl)">
+    <div class="con-50 con-100">
+      <div class="video-thumb" *ngIf="music.type === 'single'" [style.background-image]="'url(../../../..' + music.single.videoThumb + ')'"></div>
+    </div>
+    <div class="con-50 con-100">
+      <div class="video-text">
+        {{music.single.trackName}} ({{music.single.videoTime}})
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<div class="container" *ngIf="type === 'feature'">
+  <div class="video-item" *ngIf="music.feature.videoUrl.length > 0; else noVids" (click)="viewVideo(music.feature.videoUrl)">
+    <div class="con-50 con-100">
+      <div class="video-thumb" *ngIf="music.type === 'feature'" [style.background-image]="'url(../../../..' + music.feature.videoThumb + ')'"></div>
+    </div>
+    <div class="con-50 con-100">
+      <div class="video-text">
+        {{music.feature.trackName}} ({{music.feature.videoTime}})
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<div class="container" *ngIf="type === 'album'">
+  <div *ngFor="let video of music.album.tracks; let i=index">
+    <div class="video-item" *ngIf="video.videoUrl.length > 0" (click)="viewVideo(video.videoUrl)">
+      <div class="con-50 con-100">
+        <div class="video-thumb" [style.background-image]="'url(../../../..' + video.videoThumb + ')'"></div>
+      </div>
+      <div class="con-50 con-100">
+        <div class="video-text">
+          {{video.trackName}} ({{video.videoTime}})
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<ng-template class="noVids" #noVids>
+  <div class="noVids">
+    There is currently no videos available.
+  </div>
+</ng-template>

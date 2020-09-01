@@ -1,0 +1,54 @@
+<div class="main-container">
+
+  <div class="top-container">
+    <div class="top-con-bg" *ngIf="musicList[0].type === 'single'" [style.background-image]="'url(../../..' + musicList[0].single.blurArtWork + ')'"></div>
+    <div class="top-con-bg" *ngIf="musicList[0].type === 'feature'" [style.background-image]="'url(../../..' + musicList[0].feature.blurArtWork + ')'"></div>
+    <div class="top-con-bg" *ngIf="musicList[0].type === 'album'" [style.background-image]="'url(../../..' + musicList[0].album.blurArtWork + ')'"></div>
+    <div class="top-wrapper">
+      <div class="grid-col-100 grid-col-50">
+        <div class="top-con-img-con">
+          <div class="top-con-img" *ngIf="musicList[0].type === 'single'" [style.background-image]="'url(../../..' + musicList[0].single.artWork + ')'"></div>
+          <div class="top-con-img" *ngIf="musicList[0].type === 'feature'" [style.background-image]="'url(../../..' + musicList[0].feature.artWork + ')'"></div>
+          <div class="top-con-img" *ngIf="musicList[0].type === 'album'" [style.background-image]="'url(../../..' + musicList[0].album.artwork + ')'"></div>
+        </div>
+      </div>
+      <div class="grid-col-100 grid-col-50">
+        <div class="top-con-text">
+          <div class="top-text">
+            <h3 class="text-type">Latest From Espacio Dios</h3>
+            <p class="text-title" *ngIf="musicList[0].type === 'single' && musicList[0].single.feat.length ">{{musicList[0].single.trackName}} (feat. {{musicList[0].single.feat}})</p>
+            <p class="text-title" *ngIf="musicList[0].type === 'single' && musicList[0].single.feat.length === 0">{{musicList[0].single.trackName}}</p>
+            <p class="text-title" *ngIf="musicList[0].type === 'album'">{{musicList[0].album.albumName}}</p>
+            <p class="text-title" *ngIf="musicList[0].type === 'feature'">{{musicList[0].feature.artist}} - {{musicList[0].feature.trackName}} (feat. {{musicList[0].feature.feat}})</p>
+            <h5 class="text-date" *ngIf="musicList[0].type === 'single' && musicList[0].single.released">Released on {{musicList[0].single.date}}</h5>
+            <h5 class="text-date" *ngIf="musicList[0].type === 'album' && musicList[0].album.released">Released on {{musicList[0].album.date}}</h5>
+            <h5 class="text-date" *ngIf="musicList[0].type === 'feature' && musicList[0].feature.released">Released on {{musicList[0].feature.date}}</h5>
+            <h5 class="text-date" *ngIf="musicList[0].type === 'single' && !musicList[0].single.released">Releasing on {{musicList[0].single.date}}</h5>
+            <h5 class="text-date" *ngIf="musicList[0].type === 'album' && !musicList[0].album.released">Releasing on {{musicList[0].album.date}}</h5>
+            <h5 class="text-date" *ngIf="musicList[0].type === 'feature' && !musicList[0].feature.released">Releasing on {{musicList[0].feature.date}}</h5>
+            <a class="text-listen-now links links-invert" *ngIf="musicList[0].type === 'single' && !isPlatformBrowser()" [routerLink]="'/music/single/songs'" [queryParams]="{i: this.musicList[0].single.trackName , t: this.musicList[0].type }" >LISTEN NOW</a>
+            <a class="text-listen-now links links-invert" *ngIf="musicList[0].type === 'album'  && !isPlatformBrowser()" [routerLink]="'/music/album/songs'" [queryParams]="{i: this.musicList[0].album.albumName , t: this.musicList[0].type }">LISTEN NOW</a>
+            <a class="text-listen-now links links-invert" *ngIf="musicList[0].type === 'feature'  && !isPlatformBrowser()" [routerLink]="'/music/feature/songs'" [queryParams]="{i: this.musicList[0].feature.trackName , t: this.musicList[0].type }">LISTEN NOW</a>
+            <h5 class="text-listen-now links links-invert" *ngIf="musicList[0].type === 'single' && isPlatformBrowser()" [routerLink]="'/music/single/songs'" [queryParams]="{i: this.musicList[0].single.trackName , t: this.musicList[0].type }" >LISTEN NOW</h5>
+            <h5 class="text-listen-now links links-invert" *ngIf="musicList[0].type === 'album' && isPlatformBrowser()" [routerLink]="'/music/album/songs'" [queryParams]="{i: this.musicList[0].album.albumName , t: this.musicList[0].type }">LISTEN NOW</h5>
+            <h5 class="text-listen-now links links-invert" *ngIf="musicList[0].type === 'feature' && isPlatformBrowser()" [routerLink]="'/music/feature/songs'" [queryParams]="{i: this.musicList[0].feature.trackName , t: this.musicList[0].type }">LISTEN NOW</h5>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="sort-con" >
+      <a class="links" routerLink="/music/category/all" routerLinkActive="linkActive">All</a> •
+      <a class="links" routerLink="/music/category/albums" routerLinkActive="linkActive">Albums</a> •
+      <a class="links" routerLink="/music/category/singles" routerLinkActive="linkActive">Singles</a> •
+      <a class="links" routerLink="/music/category/featured" routerLinkActive="linkActive">Featured</a>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+</div>

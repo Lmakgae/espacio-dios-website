@@ -1,0 +1,45 @@
+.main-con {
+  position: relative;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.lyrics-con {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.title-con {
+  padding: 0 0 20px 0;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lyrics {
+  font-weight: 700;
+}
+
+.noLyrics {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 799px) {
+
+
+}

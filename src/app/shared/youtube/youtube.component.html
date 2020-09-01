@@ -1,0 +1,8 @@
+<div class="container">
+  <div #youtubePlayer_con class="youtube-con">
+    <youtube-player #youtubePlayer class="youtubePlayer" [videoId]="videoId" [width]="videoWidth" [height]="videoHeight" suggestedQuality="hd1080" ></youtube-player>
+  </div>
+</div>
+<div class="cancel-con" (click)="close()">
+  <div class="cancel-icon" (click)="close()"></div>
+</div>

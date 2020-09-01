@@ -1,0 +1,25 @@
+<div *ngFor="let musicItem of music | async ; let i=index">
+  <div *ngIf="musicItem.type === 'album'">
+    <div class="items-con">
+      <div class="item-bg" [style.background-image]="'url(../../../..' + musicItem.album.blurArtWork + ')'"></div>
+      <div class="items-con-100 items-con-40">
+        <div class="items-con-img-con">
+          <div class="items-con-img" *ngIf="musicItem.album" [style.background-image]="'url(../../../..' + musicItem.album.artwork + ')'"></div>
+        </div>
+      </div>
+      <div class="items-con-100 items-con-60">
+        <div class="items-con-text-con">
+          <p class="title" >{{musicItem.album.albumName}}</p>
+          <p class="date" *ngIf="musicItem.album.released" >Released {{musicItem.album.date}}</p>
+          <p class="date" *ngIf="!musicItem.album.released" >Releasing on {{musicItem.album.date}}</p>
+          <a class="links links-invert" [routerLink]="'/music/album/songs'" [queryParams]="{i: musicItem.album.albumName , t: musicItem.type }">Songs</a>
+          <a class="links links-invert" [routerLink]="'/music/album/videos'" [queryParams]="{i: musicItem.album.albumName , t: musicItem.type }">Videos</a>
+          <a class="links links-invert" [routerLink]="'/music/album/lyrics'" [queryParams]="{i: musicItem.album.albumName , t: musicItem.type }">Lyrics</a>
+          <a class="links links-invert" [routerLink]="'/music/album/buystream'" [queryParams]="{i: musicItem.album.albumName , t: musicItem.type }">Buy/Stream Album</a>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="main-container">
+
+  <div class="top-container">
+    <div class="top-con-bg" *ngIf="music.type === 'single'" [style.background-image]="'url(../../..' + music.single.blurArtWork + ')'"></div>
+    <div class="top-con-bg" *ngIf="music.type === 'feature'" [style.background-image]="'url(../../..' + music.feature.blurArtWork + ')'"></div>
+    <div class="top-con-bg" *ngIf="music.type === 'album'" [style.background-image]="'url(../../..' + music.album.blurArtWork + ')'"></div>
+    <div class="top-wrapper">
+      <div class="grid-col-100 grid-col-50">
+        <div class="top-con-img-con">
+          <div class="top-con-img" *ngIf="music.type === 'single'" [style.background-image]="'url(../../..' + music.single.artWork + ')'"></div>
+          <div class="top-con-img" *ngIf="music.type === 'feature'" [style.background-image]="'url(../../..' + music.feature.artWork + ')'"></div>
+          <div class="top-con-img" *ngIf="music.type === 'album'" [style.background-image]="'url(../../..' + music.album.artwork + ')'"></div>
+        </div>
+      </div>
+      <div class="grid-col-100 grid-col-50">
+        <div class="top-con-text">
+          <div class="content-container">
+            <div class="top-text">
+              <h3 class="text-type">{{music.type}}</h3>
+              <p class="text-title" *ngIf="music.single && music.single.feat.length > 0">{{music.single.trackName}} (feat. {{music.single.feat}})</p>
+              <p class="text-title" *ngIf="music.single && music.single.feat.length === 0">{{music.single.trackName}}</p>
+              <p class="text-title" *ngIf="music.type === 'album'">{{music.album.albumName}}</p>
+              <p class="text-title" *ngIf="music.type === 'feature'">{{music.feature.artist}} - {{music.feature.trackName}} (feat. {{music.feature.feat}})</p>
+              <h5 class="text-date" *ngIf="music.type === 'single' && music.single.released">Released on {{music.single.date}}</h5>
+              <h5 class="text-date" *ngIf="music.type === 'album' && music.album.released">Released on {{music.album.date}}</h5>
+              <h5 class="text-date" *ngIf="music.type === 'feature' && music.feature.released">Released on {{music.feature.date}}</h5>
+              <h5 class="text-date" *ngIf="music.type === 'single' && !music.single.released">Releasing on {{music.single.date}}</h5>
+              <h5 class="text-date" *ngIf="music.type === 'album' && !music.album.released">Releasing on {{music.album.date}}</h5>
+              <h5 class="text-date" *ngIf="music.type === 'feature' && !music.feature.released">Releasing on {{music.feature.date}}</h5>
+            </div>
+            <div class="sort-con" >
+              <a class="links" [routerLink]="'/music/single/songs'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'single'">Song</a>
+              <a class="links" [routerLink]="'/music/single/videos'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'single'">Video</a>
+              <a class="links" [routerLink]="'/music/single/lyrics'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'single'">Lyrics</a>
+              <a class="links" [routerLink]="'/music/single/buystream'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'single'">Buy/Stream</a>
+
+              <a class="links" [routerLink]="'/music/album/songs'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'album'">Songs</a>
+              <a class="links" [routerLink]="'/music/album/videos'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'album'">Videos</a>
+              <a class="links" [routerLink]="'/music/album/lyrics'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'album'">Lyrics</a>
+              <a class="links" [routerLink]="'/music/album/buystream'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'album'">Buy/Stream</a>
+
+              <a class="links" [routerLink]="'/music/featured/songs'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'feature'">Song</a>
+              <a class="links" [routerLink]="'/music/featured/videos'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'feature'">Video</a>
+              <a class="links" [routerLink]="'/music/featured/lyrics'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'feature'">Lyrics</a>
+              <a class="links" [routerLink]="'/music/featured/buystream'" [queryParams]="{i: this.id , t: this.type }" routerLinkActive="linkActive" *ngIf="this.type === 'feature'">Buy/Stream</a>
+            </div>
+
+            <div class="router-out">
+              <router-outlet></router-outlet>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+</div>

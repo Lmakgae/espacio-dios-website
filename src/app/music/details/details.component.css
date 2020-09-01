@@ -1,0 +1,236 @@
+.main-container {
+  position: relative;
+  width: 100%;
+  padding: 0 0 0 0;
+}
+
+.top-container {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+
+.top-con-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25vw;
+  min-height: 250px;
+  max-height: 265px;
+  background: no-repeat center ;
+  background-size: cover;
+}
+
+.top-con-im {
+  float: right;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+}
+
+.top-text {
+  color: #ffffff;
+}
+
+.text-type {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.text-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.text-date {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sort-con {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+
+.sort-con a {
+  margin: 5px 15px;
+}
+
+.links:after {
+  bottom: -1px;
+}
+
+.router-out {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 799px) {
+
+  .float-right {
+    float: right;
+    width: 100%;
+  }
+
+  .top-wrapper {
+    position: relative;
+    padding: 25px 35px 0 35px;
+  }
+
+  .grid-col-50 {
+    float: left;
+    width: 50%;
+  }
+
+  .top-con-img-con {
+    position: relative;
+    float: right;
+    width: 100%;
+    max-width: 450px;
+    height: 45vw;
+    max-height: 450px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .top-con-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    max-width: 450px;
+    background: no-repeat;
+    background-size: contain;
+  }
+
+  .top-con-text {
+    position: relative;
+    max-width: 520px;
+    height: auto;
+    padding: 30px 0 0 25px;
+  }
+
+  .top-text {
+    color: #ffffff;
+  }
+
+  .text-type {
+    padding: 50px 0 0 0;
+  }
+
+}
+
+@media only screen and (min-device-width: 799px) and (max-device-width: 921px) {
+  .sort-con a {
+    margin: 0 7px;
+  }
+}
+
+@media screen and (max-width: 798px) {
+
+  .grid-col-100 {
+    float: left;
+    width: 100%;
+  }
+
+  .top-wrapper {
+    position: relative;
+    padding: 25px 25px 0 25px;
+  }
+
+  .top-con-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50vw;
+    background: no-repeat center ;
+    background-size: cover;
+  }
+
+  .top-con-img-con {
+    position: relative;
+    height: 70vw;
+    padding: 0 0 0 0px;
+  }
+
+  .top-con-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+    background: url(../../../assets/son-of-uri-album-art_500x500.jpg) no-repeat;
+    background-size: contain;
+  }
+
+  .top-con-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .top-text {
+    color: #000000;
+    margin-top: 15px;
+  }
+
+  .text-type {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  .text-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .text-date {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .sort-con {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: 30px 0 10px 0;
+  }
+
+  .sort-con a {
+    margin: 5px 5px;
+  }
+
+}
+
+@media only screen and (max-device-width: 400px) {
+  .top-wrapper {
+    position: relative;
+    padding: 25px 15px 0 15px;
+  }
+}

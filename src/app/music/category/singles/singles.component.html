@@ -1,0 +1,26 @@
+<div *ngFor="let musicItem of music | async ; let i=index">
+  <div *ngIf="musicItem.type === 'single'">
+    <div class="items-con">
+      <div class="item-bg" [style.background-image]="'url(../../../..' + musicItem.single.blurArtWork + ')'"></div>
+      <div class="items-con-100 items-con-40">
+        <div class="items-con-img-con">
+          <div class="items-con-img" *ngIf="musicItem.single" [style.background-image]="'url(../../../..' + musicItem.single.artWork + ')'"></div>
+        </div>
+      </div>
+      <div class="items-con-100 items-con-60">
+        <div class="items-con-text-con">
+          <p class="title" *ngIf="musicItem.single && musicItem.single.feat.length > 0">{{musicItem.single.trackName}} (feat. {{musicItem.single.feat}})</p>
+          <p class="title" *ngIf="musicItem.single && musicItem.single.feat.length === 0">{{musicItem.single.trackName}}</p>
+          <p class="date" *ngIf="musicItem.single && musicItem.single.released" >Released {{musicItem.single.date}}</p>
+          <p class="date" *ngIf="musicItem.single && !musicItem.single.released" >Releasing on {{musicItem.single.date}}</p>
+          <a class="links links-invert" [routerLink]="'/music/single/songs'" [queryParams]="{i: musicItem.single.trackName , t: musicItem.type }" >Song</a>
+          <a class="links links-invert" [routerLink]="'/music/single/videos'" [queryParams]="{i: musicItem.single.trackName , t: musicItem.type }">Video</a>
+          <a class="links links-invert" [routerLink]="'/music/single/lyrics'" [queryParams]="{i: musicItem.single.trackName , t: musicItem.type }">Lyrics</a>
+          <a class="links links-invert" [routerLink]="'/music/single/buystream'" [queryParams]="{i: musicItem.single.trackName , t: musicItem.type }">Buy/Stream Single</a>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

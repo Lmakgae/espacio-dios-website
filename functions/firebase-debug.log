@@ -1,0 +1,36 @@
+[debug] [2020-03-21T23:16:54.866Z] ----------------------------------------------------------------------
+[debug] [2020-03-21T23:16:54.868Z] Command:       /usr/bin/node /usr/bin/firebase serve --only functions
+[debug] [2020-03-21T23:16:54.868Z] CLI Version:   7.13.0
+[debug] [2020-03-21T23:16:54.868Z] Platform:      linux
+[debug] [2020-03-21T23:16:54.868Z] Node Version:  v12.16.1
+[debug] [2020-03-21T23:16:54.868Z] Time:          Sun Mar 22 2020 01:16:54 GMT+0200 (South Africa Standard Time)
+[debug] [2020-03-21T23:16:54.868Z] ----------------------------------------------------------------------
+[debug] [2020-03-21T23:16:54.868Z] 
+[debug] [2020-03-21T23:16:54.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-21T23:16:54.874Z] > authorizing via signed-in user
+[debug] [2020-03-21T23:16:54.874Z] [iam] checking project espacio-dios-sa for permissions ["firebase.projects.get"]
+[debug] [2020-03-21T23:16:54.875Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/espacio-dios-sa:testIamPermissions  
+
+[debug] [2020-03-21T23:16:57.364Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-21T23:16:57.371Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/espacio-dios-sa  
+ 
+[debug] [2020-03-21T23:16:58.318Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-21T23:16:58.849Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:117:11)
+    at Object.join (path.js:1039:7)
+    at Object.<anonymous> (/usr/lib/node_modules/firebase-tools/lib/serve/functions.js:21:39)
+    at Generator.next (<anonymous>)
+    at /usr/lib/node_modules/firebase-tools/lib/serve/functions.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/lib/node_modules/firebase-tools/lib/serve/functions.js:4:12)
+    at Object.start (/usr/lib/node_modules/firebase-tools/lib/serve/functions.js:19:16)
+    at /usr/lib/node_modules/firebase-tools/lib/serve/index.js:25:40
+    at arrayMap (/usr/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:639:23)
+    at Function.map (/usr/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9554:14)
+    at /usr/lib/node_modules/firebase-tools/lib/serve/index.js:24:29
+    at Generator.next (<anonymous>)
+    at /usr/lib/node_modules/firebase-tools/lib/serve/index.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/lib/node_modules/firebase-tools/lib/serve/index.js:4:12)
+[error] 
+[error] Error: An unexpected error has occurred.

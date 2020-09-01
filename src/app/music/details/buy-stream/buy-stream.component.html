@@ -1,0 +1,221 @@
+<div class="buystream-con" *ngIf="music.type === 'single'">
+  <div class="buy-con">
+    <h5 class="buystream-title" *ngIf="music.single.released">Purchase</h5>
+    <h5 class="buystream-title" *ngIf="!music.single.released">Pre-Order</h5>
+    <a
+      *ngIf="music.single.iTunesUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.single.iTunesUrl"
+      target="_blank" rel="noreferrer"
+      >iTunes</a>
+    <a
+      *ngIf="music.single.googlePUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.single.googlePUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Google Play</a>
+    <a
+      *ngIf="music.single.amaonUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.single.amaonUrl"
+      target="_blank"
+      rel="noreferrer"
+      > Amazon Music</a>
+  </div>
+
+  <div class="stream-con">
+    <h5 class="buystream-title" *ngIf="music.single.released">Stream</h5>
+    <h5 class="buystream-title" *ngIf="!music.single.released">Pre-Add</h5>
+    <a
+      *ngIf="music.single.appleMUrl.length > 0"
+      class="btn-con button"
+      [href]="music.single.appleMUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Apple Music</a>
+    <a
+      *ngIf="music.single.spotifyUrl.length > 0"
+      class="btn-con button"
+      [href]="music.single.spotifyUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Spotify</a>
+    <a
+      *ngIf="music.single.tidalUrl.length > 0"
+      class="btn-con button"
+      [href]="music.single.tidalUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Tidal</a>
+    <a
+      *ngIf="music.single.ytubeUrl.length > 0"
+      class="btn-con button"
+      [href]="music.single.ytubeUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Youtube Music</a>
+    <a
+      *ngIf="music.single.deerUrl.length > 0"
+      class="btn-con button"
+      [href]="music.single.deerUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Deezer</a>
+    <a
+      *ngIf="music.single.jooxUrl.length > 0"
+      class="btn-con button"
+      [href]="music.single.jooxUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Joox</a>
+  </div>
+</div>
+
+<div class="buystream-con" *ngIf="music.type === 'album'">
+  <div class="buy-con">
+    <h5 class="buystream-title" *ngIf="music.album.released">Purchase</h5>
+    <h5 class="buystream-title" *ngIf="!music.album.released">Pre-Order</h5>
+    <a
+      *ngIf="music.album.iTunesUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.album.iTunesUrl"
+      target="_blank" rel="noreferrer"
+      >iTunes</a>
+    <a
+      *ngIf="music.album.googlePUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.album.googlePUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Google Play</a>
+    <a
+      *ngIf="music.album.amaonUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.album.amaonUrl"
+      target="_blank"
+      rel="noreferrer"
+      > Amazon Music</a>
+  </div>
+
+  <div class="stream-con">
+    <h5 class="buystream-title" *ngIf="music.album.released">Stream</h5>
+    <h5 class="buystream-title" *ngIf="!music.album.released">Pre-Add</h5>
+    <a
+      *ngIf="music.album.appleMUrl.length > 0"
+      class="btn-con button"
+      [href]="music.album.appleMUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Apple Music</a>
+    <a
+      *ngIf="music.album.spotifyUrl.length > 0"
+      class="btn-con button"
+      [href]="music.album.spotifyUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Spotify</a>
+    <a
+      *ngIf="music.album.tidalUrl.length > 0"
+      class="btn-con button"
+      [href]="music.album.tidalUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Tidal</a>
+    <a
+      *ngIf="music.album.ytubeUrl.length > 0"
+      class="btn-con button"
+      [href]="music.album.ytubeUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Youtube Music</a>
+    <a
+      *ngIf="music.album.deerUrl.length > 0"
+      class="btn-con button"
+      [href]="music.album.deerUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Deezer</a>
+    <a
+      *ngIf="music.album.jooxUrl.length > 0"
+      class="btn-con button"
+      [href]="music.album.jooxUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Joox</a>
+  </div>
+</div>
+
+<div class="buystream-con" *ngIf="music.type === 'feature'">
+  <div class="buy-con">
+    <h5 class="buystream-title" *ngIf="music.feature.released">Purchase</h5>
+    <h5 class="buystream-title" *ngIf="!music.feature.released">Pre-Order</h5>
+    <a
+      *ngIf="music.feature.iTunesUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.feature.iTunesUrl"
+      target="_blank" rel="noreferrer"
+      >iTunes</a>
+    <a
+      *ngIf="music.feature.googlePUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.feature.googlePUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Google Play</a>
+    <a
+      *ngIf="music.feature.amaonUrl.length > 0"
+      class="btn-con button-invert"
+      [href]="music.feature.amaonUrl"
+      target="_blank"
+      rel="noreferrer"
+      > Amazon Music</a>
+  </div>
+
+  <div class="stream-con">
+    <h5 class="buystream-title" *ngIf="music.feature.released">Stream</h5>
+    <h5 class="buystream-title" *ngIf="!music.feature.released">Pre-Add</h5>
+    <a
+      *ngIf="music.feature.appleMUrl.length > 0"
+      class="btn-con button"
+      [href]="music.feature.appleMUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Apple Music</a>
+    <a
+      *ngIf="music.feature.spotifyUrl.length > 0"
+      class="btn-con button"
+      [href]="music.feature.spotifyUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Spotify</a>
+    <a
+      *ngIf="music.feature.tidalUrl.length > 0"
+      class="btn-con button"
+      [href]="music.feature.tidalUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Tidal</a>
+    <a
+      *ngIf="music.feature.ytubeUrl.length > 0"
+      class="btn-con button"
+      [href]="music.feature.ytubeUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Youtube Music</a>
+    <a
+      *ngIf="music.feature.deerUrl.length > 0"
+      class="btn-con button"
+      [href]="music.feature.deerUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Deezer</a>
+    <a
+      *ngIf="music.feature.jooxUrl.length > 0"
+      class="btn-con button"
+      [href]="music.feature.jooxUrl"
+      target="_blank"
+      rel="noreferrer"
+      >Joox</a>
+  </div>
+</div>

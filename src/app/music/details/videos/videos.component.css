@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-item {
+  cursor: pointer;
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: no-repeat center;
+  background-size: contain;
+}
+
+.noVids {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 799px) {
+
+  .con-50 {
+    float: left;
+    width: 50%;
+  }
+
+  .video-text {
+    text-align: start;
+    padding: 62px 0 0 15px;
+  }
+
+}
+
+@media screen and (max-width: 798px) {
+
+  .con-100 {
+    float: left;
+    width: 100%;
+  }
+
+  .video-text {
+    text-align: center;
+    padding: 20px 0 40px 0;
+  }
+
+}
